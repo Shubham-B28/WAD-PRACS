@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 20</title>
+</head>
+
+<style>
+    *{
+        text-align: center;
+    }
+
+    label {
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgb(0, 0, 1);
+        border-width: 10px; /* Change 20px to your desired width */
+        padding: 3px;
+        margin: 10px;
+        display: block;
+}
+
+    button{
+        display: block;
+        margin: auto;
+        padding: 10px;
+    }
+
+    button:hover{
+        color: #333;
+    }
+
+</style>
+
+<body>
+
+    <h1>THIS IS A VALIDATING LOGIN PAGE</h1>
+
+    <form id = "Login" onsubmit="validate()">
+    
+    <label for="fName">FirstName</label>
+    <input type="text" id="fName" name="fName" placeholder="Enter your First Name">
+
+    <label for="lName">LastName</label>
+    <input type="text" id="lName" name="lName" placeholder="Enter your Last Name">
+
+    <label for="DOB">Date Of Birth</label>
+    <input type="date" id="DOB" name="DOB" placeholder="Enter your Date Of Birth">
+
+    <label for="user">Username</label>
+    <input type="text" id="user" name="user" placeholder="Enter your Username">
+
+    <label for="password">Password</label>
+    <input type="text" id="password" name="password" placeholder="Enter your Password">
+
+    <button type="submit">SUBMIT</button>
+
+    </form>
+
+    <script>
+        function validate()
+        {
+            var fName = document.getElementById('fName').value;
+            var lName = document.getElementById('lName').value;
+            var DOB = document.getElementById('DOB').value;
+            var user = document.getElementById('user').value;
+            var password = document.getElementById('password').value;
+
+            if (fName === "" || lName === "" || DOB === "" || user === "" || password === "")
+            {
+                alert("Please Enter all Values.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+</body>
+</html>
